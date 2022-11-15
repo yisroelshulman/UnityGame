@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 20eff8fa4f421e04289dde1a3329b4a6
+  - enabled: 1
+    path: Assets/Scenes/SelectionMenu.unity
+    guid: 76356d3216b9f0042a82cd71aab97535
+  - enabled: 1
+    path: Assets/Scenes/IngersollHall.unity
+    guid: 637db636b872be44ba45c86f70d05469
+  - enabled: 1
+    path: Assets/Scenes/Campus.unity
+    guid: dfaf4997766714d48a91d650314469af
+  m_configObjects: {}
