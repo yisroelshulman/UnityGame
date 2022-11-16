@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - MainMenu
-  - Menu
+  - map
   layers:
   - Default
   - TransparentFX
@@ -40,7 +40,7 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Testing
+  - name: Background
     uniqueID: 2559912439
     locked: 0
   - name: Default
