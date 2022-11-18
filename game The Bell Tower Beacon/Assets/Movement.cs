@@ -27,7 +27,7 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+        //test
         if (hmovement !=0 || vmovement !=0)
         {
             if (hmovement == 0)
