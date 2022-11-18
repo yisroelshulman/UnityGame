@@ -173,14 +173,7 @@ public class ScreenScroll : MonoBehaviour
         lastdir = direction;
         if (collision.gameObject.tag == "Player")
         {
-            GameObject.FindWithTag("map").GetComponent<ScreenScroll>().flipMoveDir(lastdir);
-
-            GameObject[] boundries;
-            boundries = GameObject.FindGameObjectsWithTag("Boundry");
-            foreach(GameObject boundry in boundries)
-            {
-                boundry.GetComponent<ScreenScroll>().flipMoveDir(lastdir);
-            }
+            lockUnlockScroll(lastdir);
         }
 	}
 
@@ -188,15 +181,20 @@ public class ScreenScroll : MonoBehaviour
 	{
         if (collision.gameObject.tag == "Player")
         {
-            GameObject.FindWithTag("map").GetComponent<ScreenScroll>().flipMoveDir(lastdir);
-
-            GameObject[] boundries;
-            boundries = GameObject.FindGameObjectsWithTag("Boundry");
-            foreach(GameObject boundry in boundries)
-            {
-                boundry.GetComponent<ScreenScroll>().flipMoveDir(lastdir);
-            }
+            lockUnlockScroll(lastdir);
             lastdir = 0;
         }
 	}
+
+    void lockUnlockScroll(int dir)
+    {
+        GameObject.FindWithTag("map").GetComponent<ScreenScroll>().flipMoveDir(lastdir);
+
+        GameObject[] boundaries;
+        boundaries = GameObject.FindGameObjectsWithTag("Boundry");
+        foreach(GameObject boundry in boundaries)
+        {
+            boundry.GetComponent<ScreenScroll>().flipMoveDir(lastdir);
+        }
+    }
 }
