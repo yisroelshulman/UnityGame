@@ -6,7 +6,6 @@ TagManager:
   tags:
   - MainMenu
   - map
-  - mapTag
   layers:
   - Default
   - TransparentFX
