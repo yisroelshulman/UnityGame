@@ -6,7 +6,10 @@ TagManager:
   tags:
   - MainMenu
   - map
-  - Boundry
+  - SquareBoundary
+  - Boundary
+  - USlantBoundary
+  - DSlantBoundary
   layers:
   - Default
   - TransparentFX

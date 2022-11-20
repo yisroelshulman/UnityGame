@@ -191,10 +191,10 @@ public class ScreenScroll : MonoBehaviour
         GameObject.FindWithTag("map").GetComponent<ScreenScroll>().flipMoveDir(lastdir);
 
         GameObject[] boundaries;
-        boundaries = GameObject.FindGameObjectsWithTag("Boundry");
-        foreach(GameObject boundry in boundaries)
+        boundaries = GameObject.FindGameObjectsWithTag("Boundary");
+        foreach(GameObject boundary in boundaries)
         {
-            boundry.GetComponent<ScreenScroll>().flipMoveDir(lastdir);
+            boundary.GetComponent<ScreenScroll>().flipMoveDir(lastdir);
         }
     }
 
