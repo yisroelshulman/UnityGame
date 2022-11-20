@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScreenScroll : MonoBehaviour
 {
     public float length, height;
-    const float SCROLL = 1.0F;
+    const float SCROLL = .10F;
     private float scrolldist = SCROLL;
     public float hmovement;
     public float vmovement;
@@ -196,5 +196,29 @@ public class ScreenScroll : MonoBehaviour
         {
             boundry.GetComponent<ScreenScroll>().flipMoveDir(lastdir);
         }
+    }
+
+    void lockUnlockUpRight()
+    {
+        lockUnlockScroll(UP);
+        lockUnlockScroll(RIGHT);
+    }
+
+    void lockUnlockUpLeft()
+    {
+        lockUnlockScroll(UP);
+        lockUnlockScroll(LEFT);
+    }
+
+    void lockUnlockDownRight()
+    {
+        lockUnlockScroll(DOWN);
+        lockUnlockScroll(RIGHT);
+    }
+
+    void lockUnlockDownLeft()
+    {
+        lockUnlockScroll(DOWN);
+        lockUnlockScroll(RIGHT);
     }
 }
