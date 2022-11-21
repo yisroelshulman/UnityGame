@@ -2,12 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-///using UnityEngine.UI;
 
-public class ButtonBehavior : MonoBehaviour
+public class MainMenuButtonBehavior : MonoBehaviour
 {
-    
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,4 +17,20 @@ public class ButtonBehavior : MonoBehaviour
         
     }
 
+    /// needs info
+    public void Rules()
+    {
+        
+    }
+
+    /// needs info
+    public void Tutorial()
+    {
+        
+    }
+
+    public void SelectionMenu()
+    {
+        SceneManager.LoadScene("SelectionMenu");
+    }
 }

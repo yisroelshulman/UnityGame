@@ -11,6 +11,10 @@ TagManager:
   - USlantBoundary
   - DSlantBoundary
   - BuildingEntrance
+  - Menu
+  - ButtonsObject
+  - ButtonPanel
+  - ButtonCanvas
   layers:
   - Default
   - TransparentFX
