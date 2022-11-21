@@ -10,6 +10,7 @@ TagManager:
   - Boundary
   - USlantBoundary
   - DSlantBoundary
+  - BuildingEntrance
   layers:
   - Default
   - TransparentFX

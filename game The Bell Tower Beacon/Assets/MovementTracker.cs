@@ -7,7 +7,7 @@ public class MovementTracker : MonoBehaviour
     
     const float SCROLL = .10F;
     //const float SPEEDSCROLL = .50F
-    private float scrolldist = SCROLL;
+    private float scrolldist;
     private float hmovement;
     private float vmovement;
     const int FLIP = -1;
@@ -29,13 +29,37 @@ public class MovementTracker : MonoBehaviour
     const int RIGHT = 3;
     const int LEFT = 4;
 
+    [SerializeField] GameObject map;
+    [SerializeField] GameObject[] squareBoundary;
+    [SerializeField] GameObject[] uSlantBoundary;
+    [SerializeField] GameObject[] dSlantBoundary;
+    [SerializeField] GameObject[] buildingEntrance;
+
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < lockedMov.Length; i++)
-        {
-            lockedMov[i] = EMPTY;
-        }
+        map = GameObject.FindWithTag("map");
+        squareBoundary = GameObject.FindGameObjectsWithTag("SquareBoundary");
+        uSlantBoundary = GameObject.FindGameObjectsWithTag("USlantBoundary");
+        dSlantBoundary = GameObject.FindGameObjectsWithTag("DSlantBoundary");
+        buildingEntrance = GameObject.FindGameObjectsWithTag("BuildingEntrance");
+
+        direction = 0;
+        scrolldist = 0;
+
+        GameObject controller = GameObject.FindWithTag("GameController");
+
+        scrolldist += controller.GetComponent<RespawnLocation>().getXOffset();
+        scrollX();
+
+        scrolldist = 0;
+        scrolldist += controller.GetComponent<RespawnLocation>().getYOffset();
+        scrollY();
+
+        //controller.GetComponent<RespawnLocation>().setXOffset(0);
+        //controller.GetComponent<RespawnLocation>().setYOffset(0);
+
+        scrolldist = SCROLL;
     }
 
     // Update is called once per frame
@@ -117,7 +141,7 @@ public class MovementTracker : MonoBehaviour
             {
                 flipScroll();
             }
-            scrollX(scrolldist);
+            scrollX();
             return;
         }
         if (dir == LEFT && lockedMov[LEFT] == EMPTY)
@@ -126,7 +150,7 @@ public class MovementTracker : MonoBehaviour
             {
                 flipScroll();
             }
-            scrollX(scrolldist);
+            scrollX();
             return;
         }
         if (dir == UP && lockedMov[UP] == EMPTY)
@@ -135,7 +159,7 @@ public class MovementTracker : MonoBehaviour
             {
                 flipScroll();
             }
-            scrollY(scrolldist);
+            scrollY();
             return;
         }
         if (dir == DOWN && lockedMov[DOWN] == EMPTY)
@@ -144,7 +168,7 @@ public class MovementTracker : MonoBehaviour
             {
                 flipScroll();
             }
-            scrollY(scrolldist);
+            scrollY();
             return;
         }
     }
@@ -155,58 +179,61 @@ public class MovementTracker : MonoBehaviour
         scrolldist = scrolldist * FLIP;
     }
     
-    private void scrollX(float scrolldist)
+    private void scrollX()
     {
         // scroll dist and send direction for tracking
-        GameObject.FindWithTag("map").GetComponent<MapandBoxColliderScroll>().hScroll(scrolldist, direction);
-
-        GameObject[] SquareBoundary;
-        SquareBoundary = GameObject.FindGameObjectsWithTag("SquareBoundary");
-        foreach(GameObject boundary in SquareBoundary)
+        map.GetComponent<MapandBoxColliderScroll>().hScroll(scrolldist, direction);
+        
+        foreach(GameObject boundary in squareBoundary)
         {
             boundary.GetComponent<MapandBoxColliderScroll>().hScroll(scrolldist, direction);
         }
-
-        GameObject[] dSlantBoundary;
-        dSlantBoundary = GameObject.FindGameObjectsWithTag("DSlantBoundary");
+        
         foreach(GameObject dsBoundary in dSlantBoundary)
         {
             dsBoundary.GetComponent<DownSlant>().hScroll(scrolldist, direction);
         }
 
-        GameObject[] uSlantBoundary;
-        uSlantBoundary = GameObject.FindGameObjectsWithTag("USlantBoundary");
+        
         foreach(GameObject usBoundary in uSlantBoundary)
         {
             usBoundary.GetComponent<UpSlant>().hScroll(scrolldist, direction);
         }
+
+        foreach(GameObject bEntrance in buildingEntrance)
+        {
+            bEntrance.GetComponent<BuildingEntranceZone>().hScroll(scrolldist);
+        }
     }
 
-    private void scrollY(float scrolldist)
+    private void scrollY()
     {
         // scroll dist and send direction for tracking
-        GameObject.FindWithTag("map").GetComponent<MapandBoxColliderScroll>().vScroll(scrolldist, direction);
+        map.GetComponent<MapandBoxColliderScroll>().vScroll(scrolldist, direction);
 
-        GameObject[] SquareBoundary;
-        SquareBoundary = GameObject.FindGameObjectsWithTag("SquareBoundary");
-        foreach(GameObject boundary in SquareBoundary)
+        
+        foreach(GameObject boundary in squareBoundary)
         {
             boundary.GetComponent<MapandBoxColliderScroll>().vScroll(scrolldist, direction);
         }
 
-        GameObject[] dSlantBoundary;
-        dSlantBoundary = GameObject.FindGameObjectsWithTag("DSlantBoundary");
+        
         foreach(GameObject dsBoundary in dSlantBoundary)
         {
             dsBoundary.GetComponent<DownSlant>().vScroll(scrolldist, direction);
         }
 
-        GameObject[] uSlantBoundary;
-        uSlantBoundary = GameObject.FindGameObjectsWithTag("USlantBoundary");
+        
         foreach(GameObject usBoundary in uSlantBoundary)
         {
             usBoundary.GetComponent<UpSlant>().vScroll(scrolldist, direction);
         }
+
+        foreach(GameObject bEntrance in buildingEntrance)
+        {
+            bEntrance.GetComponent<BuildingEntranceZone>().vScroll(scrolldist);
+        }
     }
+    
 
 }

@@ -14,7 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IngersollHall.unity
     guid: 637db636b872be44ba45c86f70d05469
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Campus.unity
     guid: dfaf4997766714d48a91d650314469af
+  - enabled: 1
+    path: Assets/Scenes/WestQuadBuilding.unity
+    guid: a8dbeb53885450f4692612ef60e7b5f7
+  - enabled: 1
+    path: Assets/Scenes/Campusv2BetterMovementLogic.unity
+    guid: e190d32b3fbe9e54ca61f82700801275
   m_configObjects: {}
