@@ -53,4 +53,9 @@ public class ButtonBehavior : MonoBehaviour
         SceneManager.LoadScene("Campusv2BetterMovementLogic");
     }
 
+    public void ExitToEastQuad() {
+        GameObject.FindWithTag("GameController").GetComponent<RespawnLocation>().setXOffset(-38.8f);
+        GameObject.FindWithTag("GameController").GetComponent<RespawnLocation>().setYOffset(-2.8F);
+        SceneManager.LoadScene("Campusv2BetterMovementLogic");
+    }
 }
