@@ -2,15 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DownSlant : MonoBehaviour
+public class MapandBoxColliderScroll : MonoBehaviour
 {
     private int direction;
     private int lastdir;
-
-    const int UP = 1;
-    const int DOWN = 2;
-    const int RIGHT = 3;
-    const int LEFT = 4;
 
     // Start is called before the first frame update
     void Start()
@@ -50,19 +45,9 @@ public class DownSlant : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             lastdir = direction;
-            if (lastdir == UP || lastdir == RIGHT)
-            {
-                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().lockDir(UP);
-                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().lockDir(RIGHT);
-                return;
-            }
-            if (lastdir == DOWN || lastdir == LEFT)
-            {
-                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().lockDir(DOWN);
-                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().lockDir(LEFT);
-                return;
-            }
+            GameObject.FindWithTag("Player").GetComponent<MovementTracker>().lockDir(lastdir);
         }
+        AudioSource.PlayClipAtPoint(GetComponent<AudioSource>().clip, transform.position);
 	}// OnCollisionEnter2D()
 
     // checks for player ending collision then unlocks the scroll
@@ -70,17 +55,10 @@ public class DownSlant : MonoBehaviour
 	{
         if (collision.gameObject.tag == "Player")
         {
-            if (lastdir == UP || lastdir == RIGHT)
-            {
-                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().unlockDir(UP);
-                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().unlockDir(RIGHT);
-            }
-            if (lastdir == DOWN || lastdir == LEFT)
-            {
-                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().unlockDir(DOWN);
-                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().unlockDir(LEFT);
-            }
+            GameObject.FindWithTag("Player").GetComponent<MovementTracker>().unlockDir(lastdir);
             lastdir = 0;
         }
-	}// OnCollisionExit2D()
+	}// OnCollisionExit2D()   
+
+
 }

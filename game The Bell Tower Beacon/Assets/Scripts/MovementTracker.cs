@@ -34,13 +34,13 @@ public class MovementTracker : MonoBehaviour
     [SerializeField] GameObject[] uSlantBoundary;
     [SerializeField] GameObject[] dSlantBoundary;
     [SerializeField] GameObject[] buildingEntrance;
-
-    private GameObject g;
+    
+    [SerializeField] GameObject PauseMenu;
 
     // Start is called before the first frame update
     void Start()
     {
-        g = GameObject.FindWithTag("Player");
+        Time.timeScale = 1.0F;
         map = GameObject.FindWithTag("map");
         squareBoundary = GameObject.FindGameObjectsWithTag("SquareBoundary");
         uSlantBoundary = GameObject.FindGameObjectsWithTag("USlantBoundary");
@@ -71,10 +71,10 @@ public class MovementTracker : MonoBehaviour
         hmovement = Input.GetAxis("Horizontal");
         vmovement = Input.GetAxis("Vertical");
 
-        bool isPause = g.GetComponent<PauseMenuOptions>().getIsPaused();
-        if (!isPause && Input.GetKeyDown(KeyCode.P))
+       
+        if (Input.GetKeyDown(KeyCode.P) && Time.timeScale != 0.0F)
         {
-            g.GetComponent<PauseMenuOptions>().Pause();
+            Pause();
         }
         
         if(abs(hmovement) == 1 || abs(vmovement) == 1)
@@ -86,7 +86,10 @@ public class MovementTracker : MonoBehaviour
         {
             max = 0;
         }
+
     }
+
+    
 
     // Update is called once per frame
     void FixedUpdate()
@@ -243,6 +246,15 @@ public class MovementTracker : MonoBehaviour
             bEntrance.GetComponent<BuildingEntranceZone>().vScroll(scrolldist);
         }
     }
+    
+
+    void Pause()
+    {
+        Vector2 pos = new Vector2(558.8197F, 274.1418F);
+        Instantiate(PauseMenu, pos, Quaternion.identity);
+        Time.timeScale = 0.0F;
+    }
+
     
 
 }

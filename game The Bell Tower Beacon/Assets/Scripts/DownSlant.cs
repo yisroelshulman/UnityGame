@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpSlant : MonoBehaviour
+public class DownSlant : MonoBehaviour
 {
     private int direction;
     private int lastdir;
@@ -50,16 +50,18 @@ public class UpSlant : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             lastdir = direction;
-            if (lastdir == UP || lastdir == LEFT)
+            if (lastdir == UP || lastdir == RIGHT)
             {
                 GameObject.FindWithTag("Player").GetComponent<MovementTracker>().lockDir(UP);
-                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().lockDir(LEFT);
+                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().lockDir(RIGHT);
+                PlaySound();
                 return;
             }
-            if (lastdir == DOWN || lastdir == RIGHT)
+            if (lastdir == DOWN || lastdir == LEFT)
             {
                 GameObject.FindWithTag("Player").GetComponent<MovementTracker>().lockDir(DOWN);
-                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().lockDir(RIGHT);
+                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().lockDir(LEFT);
+                PlaySound();
                 return;
             }
         }
@@ -70,17 +72,22 @@ public class UpSlant : MonoBehaviour
 	{
         if (collision.gameObject.tag == "Player")
         {
-            if (lastdir == UP || lastdir == LEFT)
+            if (lastdir == UP || lastdir == RIGHT)
             {
                 GameObject.FindWithTag("Player").GetComponent<MovementTracker>().unlockDir(UP);
-                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().unlockDir(LEFT);
+                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().unlockDir(RIGHT);
             }
-            if (lastdir == DOWN || lastdir == RIGHT)
+            if (lastdir == DOWN || lastdir == LEFT)
             {
                 GameObject.FindWithTag("Player").GetComponent<MovementTracker>().unlockDir(DOWN);
-                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().unlockDir(RIGHT);
+                GameObject.FindWithTag("Player").GetComponent<MovementTracker>().unlockDir(LEFT);
             }
             lastdir = 0;
         }
 	}// OnCollisionExit2D()
+
+    void PlaySound()
+    {
+        AudioSource.PlayClipAtPoint(GetComponent<AudioSource>().clip, transform.position);
+    }
 }

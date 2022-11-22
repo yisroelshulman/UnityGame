@@ -8,29 +8,17 @@ public class PauseMenuOptions : MonoBehaviour
     [SerializeField] GameObject buttonCanvas;
     [SerializeField] GameObject PauseMenu;
 
-    private bool isPaused = false;
-
     // Start is called before the first frame update
     void Start()
     {
         buttonCanvas = GameObject.FindWithTag("ButtonCanvas");
-        ButtonBack();        
-        PauseMenu = GameObject.FindWithTag("Pause");
-        Unpause();
-        
+        ButtonBack();
     }
 
     void update()
     {
         Debug.Log("test");
-        
     }
-
-    public bool getIsPaused()
-    {
-        return isPaused;
-    }
-   
 
     /// Needs functionality
     public void Buttons()
@@ -46,13 +34,12 @@ public class PauseMenuOptions : MonoBehaviour
     public void Pause()
     {
         PauseMenu.SetActive(true);
-        isPaused = true;
     }
 
     public void Unpause()
-    {
-        PauseMenu.SetActive(false);
-        isPaused = false;
+    {        
+        Time.timeScale = 1.0F;
+        Destroy(gameObject);
     }
 
     public void MainMenu()
