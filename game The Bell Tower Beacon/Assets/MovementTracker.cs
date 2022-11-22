@@ -35,9 +35,12 @@ public class MovementTracker : MonoBehaviour
     [SerializeField] GameObject[] dSlantBoundary;
     [SerializeField] GameObject[] buildingEntrance;
 
+    private GameObject g;
+
     // Start is called before the first frame update
     void Start()
     {
+        g = GameObject.FindWithTag("Player");
         map = GameObject.FindWithTag("map");
         squareBoundary = GameObject.FindGameObjectsWithTag("SquareBoundary");
         uSlantBoundary = GameObject.FindGameObjectsWithTag("USlantBoundary");
@@ -67,6 +70,12 @@ public class MovementTracker : MonoBehaviour
     {
         hmovement = Input.GetAxis("Horizontal");
         vmovement = Input.GetAxis("Vertical");
+
+        bool isPause = g.GetComponent<PauseMenuOptions>().getIsPaused();
+        if (!isPause && Input.GetKeyDown(KeyCode.P))
+        {
+            g.GetComponent<PauseMenuOptions>().Pause();
+        }
         
         if(abs(hmovement) == 1 || abs(vmovement) == 1)
         {

@@ -18,7 +18,7 @@ public class WestQuadBuildingE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (detect && Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (detect && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)))
         {
             SceneManager.LoadScene("WestQuadBuilding");
         }

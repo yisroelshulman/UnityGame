@@ -12,17 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/SelectionMenu.unity
     guid: 76356d3216b9f0042a82cd71aab97535
   - enabled: 1
-    path: Assets/Scenes/IngersollHall.unity
-    guid: 637db636b872be44ba45c86f70d05469
-  - enabled: 0
-    path: Assets/Scenes/Campus.unity
-    guid: dfaf4997766714d48a91d650314469af
+    path: Assets/Scenes/Campusv2BetterMovementLogic.unity
+    guid: e190d32b3fbe9e54ca61f82700801275
   - enabled: 1
     path: Assets/Scenes/WestQuadBuilding.unity
     guid: a8dbeb53885450f4692612ef60e7b5f7
   - enabled: 1
-    path: Assets/Scenes/Campusv2BetterMovementLogic.unity
-    guid: e190d32b3fbe9e54ca61f82700801275
+    path: Assets/Scenes/IngersollHall.unity
+    guid: 637db636b872be44ba45c86f70d05469
   - enabled: 1
     path: Assets/Scenes/Library.unity
     guid: 701a8c82cdbe733da98592db90ddae95
