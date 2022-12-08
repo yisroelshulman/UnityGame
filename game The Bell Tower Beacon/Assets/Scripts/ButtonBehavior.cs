@@ -23,4 +23,9 @@ public class ButtonBehavior : MonoBehaviour
         GameObject.FindGameObjectWithTag("GameController").GetComponent<WasteTime>().Back();
     }
 
+    public void RulesBack()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }

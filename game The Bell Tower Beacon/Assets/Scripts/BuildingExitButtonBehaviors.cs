@@ -35,6 +35,31 @@ public class BuildingExitButtonBehaviors : MonoBehaviour
     private const float INGEXTBEDX = -0.0999978f; // bedford
     private const float INGEXTBEDY = 19.90004f; // bedfford
 
+    private const float JAMESMAINX = 19.20004f;
+    private const float JAMESMAINY = -14.10001f;
+
+    private const float ROOSEASTX = 10.4f;
+    private const float ROOSEASTY = 10.60001f;
+    private const float ROOSMAINX = 19.70004f;
+    private const float ROOSMAINY = 9.2f;
+    private const float ROOSWESTX = 28.80007f;
+    private const float ROOSWESTY = 11.20001f;
+    private const float ROOSBEDX = 5.499998f; // bedford
+    private const float ROOSBEDY = 16.50003f; // bedford
+
+    private const float WESTEX = 62.09961f;
+    private const float WESTEY = 12.80002f;
+
+    private const float WHITEHEADMAINX = -48.19984f;
+    private const float WHITEHEADMAINY = -19.30003f;
+    private const float WHITEHEADCMRDX = -45.19988f;
+    private const float WHITEHEADCMRDY = -25.60006f;
+
+    private const float SUBOWESTX = -41.69994f;
+    private const float SUBOWESTY = -31.00008f;
+    private const float SUBOEASTX = -51.09979f;
+    private const float SUBOEASTY = -31.50008f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -126,5 +151,75 @@ public class BuildingExitButtonBehaviors : MonoBehaviour
     public void ExitIngersollExtOldIng()
     {
         SceneManager.LoadScene("IngersollHall");
+    }
+
+    public void ExitJamesMain()
+    {
+        PersistentData.Instance.setXOffset(JAMESMAINX);
+        PersistentData.Instance.setYOffset(JAMESMAINY);
+        SceneManager.LoadScene(CAMPUS);
+    }
+
+    public void ExitRooseveltMain()
+    {
+        PersistentData.Instance.setXOffset(ROOSMAINX);
+        PersistentData.Instance.setYOffset(ROOSMAINY);
+        SceneManager.LoadScene(CAMPUS);
+    }
+
+    public void ExitRooseveltEast()
+    {
+        PersistentData.Instance.setXOffset(ROOSEASTX);
+        PersistentData.Instance.setYOffset(ROOSEASTY);
+        SceneManager.LoadScene(CAMPUS);
+    }
+
+    public void ExitRooseveltWest()
+    {
+        PersistentData.Instance.setXOffset(ROOSWESTX);
+        PersistentData.Instance.setYOffset(ROOSWESTY);
+        SceneManager.LoadScene(CAMPUS);
+    }
+
+    public void ExitRooseveltBedfor()
+    {
+        PersistentData.Instance.setXOffset(ROOSBEDX);
+        PersistentData.Instance.setYOffset(ROOSBEDY);
+        SceneManager.LoadScene(CAMPUS);
+    }
+
+    public void ExitWestEndMain()
+    {
+        PersistentData.Instance.setXOffset(WESTEX);
+        PersistentData.Instance.setYOffset(WESTEY);
+        SceneManager.LoadScene(CAMPUS);
+    }
+
+    public void ExitWhiteheadMain()
+    {
+        PersistentData.Instance.setXOffset(WHITEHEADMAINX);
+        PersistentData.Instance.setYOffset(WHITEHEADMAINY);
+        SceneManager.LoadScene(CAMPUS);
+    }
+
+    public void ExitWhiteheadCampusrd()
+    {
+        PersistentData.Instance.setXOffset(WHITEHEADCMRDX);
+        PersistentData.Instance.setYOffset(WHITEHEADCMRDY);
+        SceneManager.LoadScene(CAMPUS);
+    }
+
+    public void ExitSUBOEast()
+    {
+        PersistentData.Instance.setXOffset(SUBOEASTX);
+        PersistentData.Instance.setYOffset(SUBOEASTY);
+        SceneManager.LoadScene(CAMPUS);
+    }
+
+    public void ExitSUBOWest()
+    {
+        PersistentData.Instance.setXOffset(SUBOWESTX);
+        PersistentData.Instance.setYOffset(SUBOWESTY);
+        SceneManager.LoadScene(CAMPUS);
     }
 }

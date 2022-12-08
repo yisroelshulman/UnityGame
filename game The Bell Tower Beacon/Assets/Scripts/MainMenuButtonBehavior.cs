@@ -20,13 +20,13 @@ public class MainMenuButtonBehavior : MonoBehaviour
     /// needs info
     public void Rules()
     {
-        
+        SceneManager.LoadScene("Rules");
     }
 
     /// needs info
     public void Tutorial()
     {
-        
+        SceneManager.LoadScene("SelectionMenu");
     }
 
     public void SelectionMenu()
