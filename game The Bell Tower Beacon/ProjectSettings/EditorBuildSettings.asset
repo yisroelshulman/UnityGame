@@ -18,9 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/WestQuadBuilding.unity
     guid: a8dbeb53885450f4692612ef60e7b5f7
   - enabled: 1
+    path: Assets/Scenes/Library.unity
+    guid: 701a8c82cdbe733da98592db90ddae95
+  - enabled: 1
+    path: Assets/Scenes/BoylanHall.unity
+    guid: bd297601a2ffb9740800c5c027b071ed
+  - enabled: 1
     path: Assets/Scenes/IngersollHall.unity
     guid: 637db636b872be44ba45c86f70d05469
   - enabled: 1
-    path: Assets/Scenes/Library.unity
-    guid: 701a8c82cdbe733da98592db90ddae95
+    path: Assets/Scenes/IngersollExt.unity
+    guid: 2b3549e17bd4ad24997855ec55f9779a
   m_configObjects: {}

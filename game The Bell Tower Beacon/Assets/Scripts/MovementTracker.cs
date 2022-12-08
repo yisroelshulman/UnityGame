@@ -52,15 +52,13 @@ public class MovementTracker : MonoBehaviour
 
         GameObject controller = GameObject.FindWithTag("GameController");
 
-        scrolldist += controller.GetComponent<RespawnLocation>().getXOffset();
+        scrolldist += PersistentData.Instance.getXOffset();
         scrollX();
 
         scrolldist = 0;
-        scrolldist += controller.GetComponent<RespawnLocation>().getYOffset();
+        scrolldist += PersistentData.Instance.getYOffset();
         scrollY();
 
-        //controller.GetComponent<RespawnLocation>().setXOffset(0);
-        //controller.GetComponent<RespawnLocation>().setYOffset(0);
 
         scrolldist = SCROLL;
     }
@@ -205,16 +203,15 @@ public class MovementTracker : MonoBehaviour
         {
             dsBoundary.GetComponent<DownSlant>().hScroll(scrolldist, direction);
         }
-
         
         foreach(GameObject usBoundary in uSlantBoundary)
         {
             usBoundary.GetComponent<UpSlant>().hScroll(scrolldist, direction);
         }
 
-        foreach(GameObject bEntrance in buildingEntrance)
+        foreach(GameObject Entrance in buildingEntrance)
         {
-            bEntrance.GetComponent<BuildingEntranceZone>().hScroll(scrolldist);
+            Entrance.GetComponent<BuildingEntranceZone>().hScroll(scrolldist);
         }
     }
 
@@ -241,9 +238,9 @@ public class MovementTracker : MonoBehaviour
             usBoundary.GetComponent<UpSlant>().vScroll(scrolldist, direction);
         }
 
-        foreach(GameObject bEntrance in buildingEntrance)
+        foreach(GameObject Entrance in buildingEntrance)
         {
-            bEntrance.GetComponent<BuildingEntranceZone>().vScroll(scrolldist);
+            Entrance.GetComponent<BuildingEntranceZone>().vScroll(scrolldist);
         }
     }
     

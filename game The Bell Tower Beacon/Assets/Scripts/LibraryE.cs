@@ -31,7 +31,6 @@ public class LibraryE : MonoBehaviour
     void OnTriggerExit2D(Collider2D collider)
     {
         detect = false;
-        Debug.Log("Exited");
     }
 
 }

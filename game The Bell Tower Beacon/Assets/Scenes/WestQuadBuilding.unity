@@ -426,7 +426,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1823110287}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: WestQuadButtonBehavior, Assembly-CSharp
         m_MethodName: GetNewTask
         m_Mode: 1
@@ -712,7 +712,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1823110287}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: WestQuadButtonBehavior, Assembly-CSharp
         m_MethodName: CompleteTask
         m_Mode: 1
@@ -847,7 +847,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1823110287}
-        m_TargetAssemblyTypeName: WestQuadButtonBehavior, Assembly-CSharp
+        m_TargetAssemblyTypeName: BuildingExitButtonBehaviors, Assembly-CSharp
         m_MethodName: ExitWestQuad
         m_Mode: 1
         m_Arguments:
@@ -896,63 +896,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027313077}
   m_CullTransparentMesh: 1
---- !u!1001 &1145617331
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 648642214278264876, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 648642214278264876, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.514061
-      objectReference: {fileID: 0}
-    - target: {fileID: 648642214278264876, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -9.132556
-      objectReference: {fileID: 0}
-    - target: {fileID: 648642214278264876, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.7107177
-      objectReference: {fileID: 0}
-    - target: {fileID: 648642214278264876, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 648642214278264876, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 648642214278264876, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 648642214278264876, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 648642214278264876, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 648642214278264876, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 648642214278264876, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 648642214278264878, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
-      propertyPath: m_Name
-      value: GameController
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
 --- !u!1 &1490521815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1337,7 +1280,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1823110282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e872c4cdd26b244d98092d896f13ee9, type: 3}
+  m_Script: {fileID: 11500000, guid: a5593b5873c648945a16da4dd3054a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2088252323

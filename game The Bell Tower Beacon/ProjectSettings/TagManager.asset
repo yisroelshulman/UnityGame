@@ -17,6 +17,7 @@ TagManager:
   - ButtonCanvas
   - Boundry
   - Pause
+  - TimeWaste
   layers:
   - Default
   - TransparentFX

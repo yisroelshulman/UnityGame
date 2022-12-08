@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// controlls the scroll of the entrance zones
 public class BuildingEntranceZone : MonoBehaviour
 {
 
