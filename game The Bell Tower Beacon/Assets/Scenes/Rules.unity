@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 184954511}
   - component: {fileID: 184954510}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,12 +156,12 @@ RectTransform:
   m_Children:
   - {fileID: 662801185}
   m_Father: {fileID: 2118660981}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015736, y: -245}
-  m_SizeDelta: {x: 170.2071, y: 50.4141}
+  m_AnchoredPosition: {x: 0.000047684, y: -467}
+  m_SizeDelta: {x: 215.6882, y: 50.4141}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &184954510
 MonoBehaviour:
@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 662801187}
   - component: {fileID: 662801186}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BackText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -460,7 +460,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662801184}
   m_CullTransparentMesh: 1
---- !u!1 &1985201139
+--- !u!1 &882556673
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -468,9 +468,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1985201140}
-  - component: {fileID: 1985201142}
-  - component: {fileID: 1985201141}
+  - component: {fileID: 882556674}
+  - component: {fileID: 882556676}
+  - component: {fileID: 882556675}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -478,33 +478,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1985201140
+--- !u!224 &882556674
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985201139}
+  m_GameObject: {fileID: 882556673}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2118660981}
-  m_RootOrder: 0
+  m_Father: {fileID: 2139024805}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 45.865486}
-  m_SizeDelta: {x: 1065, y: 513.267}
+  m_AnchoredPosition: {x: -1.2614, y: 36.869762}
+  m_SizeDelta: {x: 1871.4779, y: 936.0001}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1985201141
+--- !u!114 &882556675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985201139}
+  m_GameObject: {fileID: 882556673}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -518,19 +518,34 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Items still Missing:\r\nTimer - to compute how long you have been playing.
-    The goal is to have the lowest time (high score = lowest time [not yet implemented]).\r\nTasks
-    \u2013 will be timed failure to complete a task will increase the time played.\r\nFinal
-    Exam - test at the end which is a second type of high score (more correct answers
-    is better).\r\nMini Map \u2013 small map to pull up as overview of campus to
-    label each building as a help tool (pulling up the map will have a time penalty).\r\nAnimations,
-    sound controls, (Tutorial and game are the same) etc\u2026\r\n\r\nThe goal of
-    the game is to teach the player about campus resources, as such the player will
-    have tasks to complete which will highlight the resource and where/how to access
-    it. The player will move around campus going to specific rooms in buildings (be
-    careful the wrong room will waste some time). Tasks will be times and a final
-    exam at the end will evaluate how well the player knows resources around campus
-    and where to find them.\r\n"
+  m_text: "Still working on:\r\nTimer \u2013 a timer to complete the tasks in the
+    allotted time.\r\nZoom function \u2013 the ability to zoom in and out on the
+    main map to help with visibility.\r\nFinal Exam - test at the end which is a
+    second type of high score (more correct answers is better).\r\nMini Map \u2013
+    small map to pull up as overview of campus to label each building as a help tool
+    (pulling up the map will have a time penalty).\r\nAnimations, sound controls,
+    (Tutorial and game are the same).\r\nHigh Score recording \u2013 the recording
+    of the high scores.\r\nTasks \u2013 a better description and small motivation/backstory
+    for each task. A way to see which task is currently active.\nPenalties \u2013
+    need to add functionality to increase time played by penalty amount when the
+    wrong room is entered (or when the wrong task is being selected to complete).\r\n\r\nNote:\r\nThe
+    movement is intentional, the player can only move horizontal or vertical and
+    not diagonal.\r\n\r\nInstructions:\r\nThe goal of the game is to teach the player
+    about campus resources, as such the player will have tasks to complete which
+    will highlight the resource and where/how to access it. The player will move
+    around campus going to specific rooms in buildings (be careful the wrong room
+    will waste some time). Tasks will be timed and a final exam at the end will evaluate
+    how well the player knows resources around campus and where to find them.\r\nThe
+    player can move around the map using the arrow keys or the WASD keys. Next to
+    every enterable building there is an outline zone, when the player is in that
+    zone hitting enter on the keyboard will enter the building.\r\nTo get a new task
+    the player must go to the West Quad Building and select the get task Button.
+    A new task will appear on the screen. When the task is complete the task done/complete
+    count will increase. When all 10 tasks are complete the player will have the
+    option to end the game or take the Final exam. (Be careful failure to complete
+    a task will waste time since there is a time penalty).\r\nThere are two high
+    scores, one is the in-game time to complete all 10 tasks. The second is score
+    on the Final Exam.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -557,8 +572,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 31
+  m_fontSizeBase: 31
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -599,13 +614,13 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1985201142
+--- !u!222 &882556676
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985201139}
+  m_GameObject: {fileID: 882556673}
   m_CullTransparentMesh: 1
 --- !u!1 &2066726293
 GameObject:
@@ -721,7 +736,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1985201140}
   - {fileID: 184954509}
   m_Father: {fileID: 2139024805}
   m_RootOrder: 0
@@ -801,6 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe661f7e99ea9ee4494836d2df2df5b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TaskPanel: {fileID: 0}
 --- !u!114 &2139024802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,10 +845,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -875,6 +890,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2118660981}
+  - {fileID: 882556674}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

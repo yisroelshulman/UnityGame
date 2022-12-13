@@ -52,11 +52,11 @@ public class MovementTracker : MonoBehaviour
 
         GameObject controller = GameObject.FindWithTag("GameController");
 
-        scrolldist += PersistentData.Instance.getXOffset();
+        scrolldist += PersistentData.Instance.GetXOffset();
         scrollX();
 
         scrolldist = 0;
-        scrolldist += PersistentData.Instance.getYOffset();
+        scrolldist += PersistentData.Instance.GetYOffset();
         scrollY();
 
 

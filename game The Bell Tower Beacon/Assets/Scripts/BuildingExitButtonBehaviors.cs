@@ -68,64 +68,64 @@ public class BuildingExitButtonBehaviors : MonoBehaviour
 
     public void ExitBoylanMain()
     {
-        PersistentData.Instance.setXOffset(BOYLANMAINX);
-        PersistentData.Instance.setYOffset(BOYLANMAINY);
+        PersistentData.Instance.SetXOffset(BOYLANMAINX);
+        PersistentData.Instance.SetYOffset(BOYLANMAINY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitBoylanEast()
     {
-        PersistentData.Instance.setXOffset(BOYLANEASTX);
-        PersistentData.Instance.setYOffset(BOYLANEASTY);
+        PersistentData.Instance.SetXOffset(BOYLANEASTX);
+        PersistentData.Instance.SetYOffset(BOYLANEASTY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitBoylanWest()
     {
-        PersistentData.Instance.setXOffset(BOYLANWESTX);
-        PersistentData.Instance.setYOffset(BOYLANWESTY);
+        PersistentData.Instance.SetXOffset(BOYLANWESTX);
+        PersistentData.Instance.SetYOffset(BOYLANWESTY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitBoylanCampusRd()
     {
-        PersistentData.Instance.setXOffset(BOYLANCMRDX);
-        PersistentData.Instance.setYOffset(BOYLANCMRDY);
+        PersistentData.Instance.SetXOffset(BOYLANCMRDX);
+        PersistentData.Instance.SetYOffset(BOYLANCMRDY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitWestQuad()
     {
-        PersistentData.Instance.setXOffset(WESTQUADX);
-        PersistentData.Instance.setYOffset(WESTQUADY);
+        PersistentData.Instance.SetXOffset(WESTQUADX);
+        PersistentData.Instance.SetYOffset(WESTQUADY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitLibrary()
     {
-        PersistentData.Instance.setXOffset(LIBX);
-        PersistentData.Instance.setYOffset(LIBY);
+        PersistentData.Instance.SetXOffset(LIBX);
+        PersistentData.Instance.SetYOffset(LIBY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitIngersollWest()
     {
-        PersistentData.Instance.setXOffset(INGWESTX);
-        PersistentData.Instance.setYOffset(INGWESTY);
+        PersistentData.Instance.SetXOffset(INGWESTX);
+        PersistentData.Instance.SetYOffset(INGWESTY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitIngersollMain()
     {
-        PersistentData.Instance.setXOffset(INGMAINX);
-        PersistentData.Instance.setYOffset(INGMAINY);
+        PersistentData.Instance.SetXOffset(INGMAINX);
+        PersistentData.Instance.SetYOffset(INGMAINY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitIngersollEast()
     {
-        PersistentData.Instance.setXOffset(INGEASTX);
-        PersistentData.Instance.setYOffset(INGEASTY);
+        PersistentData.Instance.SetXOffset(INGEASTX);
+        PersistentData.Instance.SetYOffset(INGEASTY);
         SceneManager.LoadScene(CAMPUS);
     }
 
@@ -136,15 +136,15 @@ public class BuildingExitButtonBehaviors : MonoBehaviour
 
     public void ExitIngersollExtMain()
     {
-        PersistentData.Instance.setXOffset(INGEXTMAINX);
-        PersistentData.Instance.setYOffset(INGEXTMAINY);
+        PersistentData.Instance.SetXOffset(INGEXTMAINX);
+        PersistentData.Instance.SetYOffset(INGEXTMAINY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitIngersollExtBedford()
     {
-        PersistentData.Instance.setXOffset(INGEXTBEDX);
-        PersistentData.Instance.setYOffset(INGEXTBEDY);
+        PersistentData.Instance.SetXOffset(INGEXTBEDX);
+        PersistentData.Instance.SetYOffset(INGEXTBEDY);
         SceneManager.LoadScene(CAMPUS);
     }
 
@@ -155,71 +155,71 @@ public class BuildingExitButtonBehaviors : MonoBehaviour
 
     public void ExitJamesMain()
     {
-        PersistentData.Instance.setXOffset(JAMESMAINX);
-        PersistentData.Instance.setYOffset(JAMESMAINY);
+        PersistentData.Instance.SetXOffset(JAMESMAINX);
+        PersistentData.Instance.SetYOffset(JAMESMAINY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitRooseveltMain()
     {
-        PersistentData.Instance.setXOffset(ROOSMAINX);
-        PersistentData.Instance.setYOffset(ROOSMAINY);
+        PersistentData.Instance.SetXOffset(ROOSMAINX);
+        PersistentData.Instance.SetYOffset(ROOSMAINY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitRooseveltEast()
     {
-        PersistentData.Instance.setXOffset(ROOSEASTX);
-        PersistentData.Instance.setYOffset(ROOSEASTY);
+        PersistentData.Instance.SetXOffset(ROOSEASTX);
+        PersistentData.Instance.SetYOffset(ROOSEASTY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitRooseveltWest()
     {
-        PersistentData.Instance.setXOffset(ROOSWESTX);
-        PersistentData.Instance.setYOffset(ROOSWESTY);
+        PersistentData.Instance.SetXOffset(ROOSWESTX);
+        PersistentData.Instance.SetYOffset(ROOSWESTY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitRooseveltBedfor()
     {
-        PersistentData.Instance.setXOffset(ROOSBEDX);
-        PersistentData.Instance.setYOffset(ROOSBEDY);
+        PersistentData.Instance.SetXOffset(ROOSBEDX);
+        PersistentData.Instance.SetYOffset(ROOSBEDY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitWestEndMain()
     {
-        PersistentData.Instance.setXOffset(WESTEX);
-        PersistentData.Instance.setYOffset(WESTEY);
+        PersistentData.Instance.SetXOffset(WESTEX);
+        PersistentData.Instance.SetYOffset(WESTEY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitWhiteheadMain()
     {
-        PersistentData.Instance.setXOffset(WHITEHEADMAINX);
-        PersistentData.Instance.setYOffset(WHITEHEADMAINY);
+        PersistentData.Instance.SetXOffset(WHITEHEADMAINX);
+        PersistentData.Instance.SetYOffset(WHITEHEADMAINY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitWhiteheadCampusrd()
     {
-        PersistentData.Instance.setXOffset(WHITEHEADCMRDX);
-        PersistentData.Instance.setYOffset(WHITEHEADCMRDY);
+        PersistentData.Instance.SetXOffset(WHITEHEADCMRDX);
+        PersistentData.Instance.SetYOffset(WHITEHEADCMRDY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitSUBOEast()
     {
-        PersistentData.Instance.setXOffset(SUBOEASTX);
-        PersistentData.Instance.setYOffset(SUBOEASTY);
+        PersistentData.Instance.SetXOffset(SUBOEASTX);
+        PersistentData.Instance.SetYOffset(SUBOEASTY);
         SceneManager.LoadScene(CAMPUS);
     }
 
     public void ExitSUBOWest()
     {
-        PersistentData.Instance.setXOffset(SUBOWESTX);
-        PersistentData.Instance.setYOffset(SUBOWESTY);
+        PersistentData.Instance.SetXOffset(SUBOWESTX);
+        PersistentData.Instance.SetYOffset(SUBOWESTY);
         SceneManager.LoadScene(CAMPUS);
     }
 }
