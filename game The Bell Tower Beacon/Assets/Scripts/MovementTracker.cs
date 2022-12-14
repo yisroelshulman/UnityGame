@@ -37,6 +37,15 @@ public class MovementTracker : MonoBehaviour
     
     [SerializeField] GameObject PauseMenu;
 
+    // For animations:
+    [SerializeField] Animator animator;
+
+    // Constants for animations:
+    const int SPIRTE_LEFT = 0;
+    const int SPRITE_RIGHT = 1;
+    const int SPRITE_NOT_MOVING = 0;
+    const int SPRITE_MOVING = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +70,12 @@ public class MovementTracker : MonoBehaviour
 
 
         scrolldist = SCROLL;
+
+        // For animations:
+        if (animator == null) animator = GetComponent<Animator>();
+
+        animator.SetInteger("Direction", SPIRTE_LEFT);
+        animator.SetInteger("Moving", SPRITE_NOT_MOVING);
     }
 
     // Update is called once per frame
@@ -110,13 +125,17 @@ public class MovementTracker : MonoBehaviour
                 if (hmovement > 0)
                 {
                     scroll(RIGHT);
+                    animator.SetInteger("Direction", SPRITE_RIGHT);
                 }
                 else if (hmovement < 0)
                 {
                     scroll(LEFT);
+                    animator.SetInteger("Direction", SPIRTE_LEFT);
                 }
             }
-
+            animator.SetInteger("Moving", SPRITE_MOVING);
+        } else {
+            animator.SetInteger("Moving", SPRITE_NOT_MOVING);
         }
     }
 
