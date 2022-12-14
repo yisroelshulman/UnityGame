@@ -27,6 +27,9 @@ public class PersistentData : MonoBehaviour
 
     public static PersistentData Instance;
 
+    private int examCorrect;
+    private int examWrong;
+
     public void Awake()
     {
         if (Instance == null)
@@ -99,6 +102,16 @@ public class PersistentData : MonoBehaviour
     public int GetNumTasks()
     {
         return NUMTASKS;
+    }
+
+    public int GetExamCorrect()
+    {
+        return examCorrect;
+    }
+
+    public int GetExamWrong()
+    {
+        return examWrong;
     }
 
     public string GetTask()
@@ -179,6 +192,16 @@ public class PersistentData : MonoBehaviour
         {
             tasksLeftList[i] = i;
         }
+    }
+
+    public void SetExamCorrect(int correct)
+    {
+        examCorrect = correct;
+    }
+
+    public void SetExamWrong(int wrong)
+    {
+        examWrong = wrong;
     }
 
 }
