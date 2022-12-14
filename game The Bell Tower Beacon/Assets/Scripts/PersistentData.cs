@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class PersistentData : MonoBehaviour
 {
@@ -139,6 +140,10 @@ public class PersistentData : MonoBehaviour
             tasksLeftList[index] = tasksLeftList[taskLeft - 1];
             taskLeft--;
             currentTask = -1;
+            if (taskLeft == 0)
+            {
+                SceneManager.LoadScene("FinalExam");
+            }
         }
     }
 

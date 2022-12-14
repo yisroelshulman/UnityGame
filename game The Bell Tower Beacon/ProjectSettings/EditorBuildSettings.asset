@@ -47,4 +47,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rules.unity
     guid: 37353add56279d74cb366247c8227e9f
+  - enabled: 1
+    path: Assets/Scenes/FinalExam.unity
+    guid: 89e093f2ea6888a4595fb3a60812c52b
+  - enabled: 1
+    path: Assets/Scenes/HighScores.unity
+    guid: b3bc42fd4717e354f8db037e85517f19
   m_configObjects: {}
