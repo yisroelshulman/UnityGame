@@ -147,9 +147,6 @@ public class PersistentData : MonoBehaviour
         }
     }
 
-
-
-
     public void SetXOffset(float x)
     {
         xOffset = x;
@@ -210,4 +207,3 @@ public class PersistentData : MonoBehaviour
     }
 
 }
-
