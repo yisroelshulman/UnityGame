@@ -1,0 +1,216 @@
+Game Menus:
+	Loading Screen:
+		Random time for loading animation?
+
+	Load Menu:
+		Rules:
+			Rules and winning conditions.
+
+		Buttons:
+			WASD/Up, right, down, left for movement.
+			Tab to move between multiple buttons.
+			Enter or left mouse click to select.
+
+		Tutorial:
+			Game run through.
+
+		Play Game:
+			Go to the Selection Menu
+		
+	Selection Menu:
+		Player Name:
+			Player enters their name.
+
+		Character Seletion:
+			Player Selects a character.
+
+		Start Game:
+			Go to Campus Map to start the game.	
+
+	Stats Menu:
+		Current Score:
+		Current Time Played:
+		Tasks Completed/Tasks to go:
+
+	Scores Menu:
+		Persisitant data keeping track of the high scores.
+
+	Mini Map Menu:
+		looking up the location if the player doesnt know where to go.
+		Every time this menu is opened the player is penalized.
+
+	Pause Menu:
+		Change button sets.
+		Mini Map Menu:
+
+		Pause Menu Timer:
+			When in pause menu the task timer should decrease by double time.
+
+	Elevator Menu:
+		Floor Selection based on the building.
+
+	Stairs Menu:
+		Floor Selection based on the building.
+
+******************************************************************************
+Game Scenes:
+	Campus Map:
+
+	WEB Building:
+		Exits:
+		Rooms:
+
+	West Quad Buiding:
+		Exits:
+		Floor #:
+		Elevator:
+		Stairs:
+		Rooms:
+			Per floor
+
+	Roosevelt Hall:
+		Exits:
+		Floor #:
+		Elevator:
+		Stairs:
+		Rooms:
+			Per floor
+
+	James Hall:
+		Exits:
+		Floor #:
+		Elevator:
+		Stairs:
+		Rooms:
+			Per floor
+
+	Ingersoll Hall:
+		Exits:
+		Floor #:
+		Elevator:
+		Stairs:
+		Rooms:
+			Per floor
+
+	Ingersoll Hall Extension:
+		Exits:
+		Floor #:
+		Elevator:
+		Stairs:
+		Rooms:
+			Per floor
+
+	Boylan Hall:
+		Exits:
+		Floor #:
+		Elevator:
+		Stairs:
+		Rooms:
+			Per floor
+
+	Library:
+		Exits:
+		Floor #:
+		Elevator:
+		Stairs:
+		Rooms:
+			Per floor
+
+	Whitehead Hall:
+		Exits:
+		Floor #:
+		Elevator:
+		Stairs:
+		Rooms:
+			Per floor
+
+	Whitman Hall:
+		Exits:
+		Floor #:
+		Elevator:
+		Stairs:
+		Rooms:
+			Per floor
+
+	Tow Center:
+		Exits:
+		Floor #:
+		Elevator:
+		Stairs:
+		Rooms:
+			Per floor
+
+	SUBO/Student Center:
+		Exits:
+		Floor #:
+		Elevator:
+		Stairs:
+		Rooms:
+			Per floor	
+
+	Final Exam Room:
+		Start Exam.
+
+-------------------------------------------------------------------------------
+Player:
+	Name:
+		First and Last Name.
+
+	Characters:
+		Give a small backstory to characters?
+			
+		Hitbox/RidgedBody:
+			Characters need hitboxes but since this is a 2D map there is no gravity. Walking
+			should be an option between WASD and arrow buttons. This selection should be on the menu and the
+			pause menu.		
+
+		Date of Birth:
+			DD/MM/YYYY.
+
+		EMPLID:
+			2X XXX XXX
+
+		Animation:
+			Two directions
+			Potentioaly moving animation.
+
+		Mode:
+			Firts person/Third person?
+
+	Tasks completed:
+		list of all the tasks the player has already done.
+
+	Time played:?
+
+	Score:
+		The players score, should be a combination of tasks completed and time to complete them.
+
+	Final Exam Score:
+		The score the player got on the final exam. (might not be necessary as a player component as this
+		is the last thing in the game).	
+
+******************************************************************************	
+Game Play:
+	Tasks:
+		Tasks should be timed and received at the WEST Quad or the Library.
+
+		Honors
+		LGBTQ+
+		SAIL
+		Magner Center
+		Registrar
+		FInancial AId
+		Learning Center
+		Food Pantry
+		WEB
+		Library
+		Disabilities
+		Scholarships
+		Health Clinic
+		Women's Center
+		Personal Counseling
+
+	Final Exam:
+		10 - 15 Questions.
+		Questions should be from a pool of at least 4 questions per task type. At least one will be selected
+		from each section and the rest will be random.
