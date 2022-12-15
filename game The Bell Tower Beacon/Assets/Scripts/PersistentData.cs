@@ -12,7 +12,7 @@ public class PersistentData : MonoBehaviour
     [SerializeField] static bool isTimeSet;
     [SerializeField] static bool isTaskActive;
     [SerializeField] string playerName;
-    [SerializeField] int playerExamScore;
+    [SerializeField] float playerExamScore;
     [SerializeField] int playerTime;
 
 
@@ -34,6 +34,12 @@ public class PersistentData : MonoBehaviour
     private int examCorrect;
     private int examWrong;
 
+    const int FULL = 0;
+    const int TASK =1;
+    const int EXAM = 2;
+
+    private int mode;
+
     public void Awake()
     {
         if (Instance == null)
@@ -49,6 +55,7 @@ public class PersistentData : MonoBehaviour
             playerName = "";
             playerExamScore = 0;
             playerTime = -1;
+            mode = FULL;
         }
         else
             Destroy(gameObject);
@@ -116,14 +123,24 @@ public class PersistentData : MonoBehaviour
         return playerName;
     }
 
-    public int GetExamScore()
+    public float GetExamScore()
     {
-        return playerExamScore;
+        if (examCorrect + examWrong == 0)
+        {
+            return 0f;
+        }
+        playerExamScore = (float) examCorrect / (examCorrect + examWrong);
+        return playerExamScore*100;
     }
 
     public int GetTime()
     {
         return playerTime;
+    }
+
+    public int GetMode()
+    {
+        return mode;
     }
 
     public string GetTask()
@@ -153,6 +170,15 @@ public class PersistentData : MonoBehaviour
             currentTask = -1;
             if (taskLeft == 0)
             {
+                DateTime time = DateTime.Now;
+                int hour = time.Hour;
+                int minute = time.Minute;
+                int second = time.Second;
+                playerTime = hour*SECINHR + minute*SECINMIN + second;
+                if (mode == TASK)
+                {
+                    SceneManager.LoadScene("HighScores");
+                }
                 SceneManager.LoadScene("FinalExam");
             }
         }
@@ -223,6 +249,11 @@ public class PersistentData : MonoBehaviour
         playerName = s;
     }
 
+    public void SetMode(int md)
+    {
+        mode = md;
+    }
+
     public void ResetPlayerExamScore()
     {
         playerExamScore = 0;
@@ -237,6 +268,14 @@ public class PersistentData : MonoBehaviour
     {
         startTotalSeconds = 0;
         isTimeSet = false;
+    }
+
+    public void Reset()
+    {
+        ResetPlayerExamScore();
+        ResetPlayerTime();
+        ResetTime();
+        mode = FULL;
     }
 
 }

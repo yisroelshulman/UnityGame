@@ -30,7 +30,7 @@ public class HighScores : MonoBehaviour
     void Start()
     {
         playerName = PersistentData.Instance.GetName();
-        playerExamScore = PersistentData.Instance.GetExamScore();
+        playerExamScore = Mathf.RoundToInt(PersistentData.Instance.GetExamScore());
         playerTime = PersistentData.Instance.GetTime();
         if (playerExamScore > 0)
         {
