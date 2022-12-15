@@ -522,29 +522,28 @@ MonoBehaviour:
     allotted time.\r\nZoom function \u2013 the ability to zoom in and out on the
     main map to help with visibility.\r\nMini Map \u2013 small map to pull up as
     overview of campus to label each building as a help tool (pulling up the map
-    will have a time penalty).\r To pause the game press the \"p\" key.\nAnimations,
-    sound controls, (Tutorial and game are the same).\r\nHigh Score recording \u2013
-    the recording of the high scores.\r\nTasks \u2013 a better description and small
-    motivation/backstory for each task. A way to see which task is currently active.\nPenalties
-    \u2013 need to add functionality to increase time played by penalty amount when
-    the wrong room is entered (or when the wrong task is being selected to complete).\r\n\r\nNote:\r\nThe
-    movement is intentional, the player can only move horizontal or vertical and
-    not diagonal.\r\n\r\nInstructions:\r\nThe goal of the game is to teach the player
-    about campus resources, as such the player will have tasks to complete which
-    will highlight the resource and where/how to access it. The player will move
-    around campus going to specific rooms in buildings (be careful the wrong room
-    will waste some time). Tasks will be timed and a final exam at the end will evaluate
-    how well the player knows resources around campus and where to find them.\r\nThe
-    player can move around the map using the arrow keys or the WASD keys. Next to
-    every enterable building there is an outline zone, when the player is in that
-    zone hitting enter on the keyboard will enter the building.\r\nTo get a new task
-    the player must go to the West Quad Building and select the get task Button.
-    A new task will appear on the screen. When the task is complete the task done/complete
-    count will increase. When all 10 tasks are complete the player will have the
-    option to end the game or take the Final exam. (Be careful failure to complete
-    a task will waste time since there is a time penalty).\r\nThere are two high
-    scores, one is the in-game time to complete all 10 tasks. The second is score
-    on the Final Exam.\r\n"
+    will have a time penalty).\r\nAnimations, sound controls, (Tutorial and game
+    are the same).\r\nHigh Score recording \u2013 the recording of the high scores.\r\nTasks
+    \u2013 a better description and small motivation/backstory for each task. A way
+    to see which task is currently active.\nPenalties \u2013 need to add functionality
+    to increase time played by penalty amount when the wrong room is entered (or
+    when the wrong task is being selected to complete).\r\n\r\nNote:\r\nThe movement
+    is intentional, the player can only move horizontal or vertical and not diagonal.\r\n\r\nInstructions:\r\nThe
+    goal of the game is to teach the player about campus resources, as such the player
+    will have tasks to complete which will highlight the resource and where/how to
+    access it. The player will move around campus going to specific rooms in buildings
+    (be careful the wrong room will waste some time). Tasks will be timed and a final
+    exam at the end will evaluate how well the player knows resources around campus
+    and where to find them.\r\nThe player can move around the map using the arrow
+    keys or the WASD keys. Next to every enterable building there is an outline zone,
+    when the player is in that zone hitting enter on the keyboard will enter the
+    building.\r\nTo get a new task the player must go to the West Quad Building and
+    select the get task Button. A new task will appear on the screen. When the task
+    is complete the task done/complete count will increase. When all 10 tasks are
+    complete the player will have the option to end the game or take the Final exam.
+    (Be careful failure to complete a task will waste time since there is a time
+    penalty).\r\nThere are two high scores, one is the in-game time to complete all
+    10 tasks. The second is score on the Final Exam.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -44,9 +44,6 @@ public class PauseMenuOptions : MonoBehaviour
 
     public void MainMenu()
     {
-        PersistentData.Instance.ResetPlayerExamScore();
-        PersistentData.Instance.ResetPlayerTime();
-        PersistentData.Instance.ResetTime();
         SceneManager.LoadScene("MainMenu");
     }
 }

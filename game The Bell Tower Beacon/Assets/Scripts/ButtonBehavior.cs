@@ -9,7 +9,6 @@ public class ButtonBehavior : MonoBehaviour
 {
     
     [SerializeField] GameObject TaskPanel;
-    private const string CAMPUS = "Campusv2BetterMovementLogic";
     
     // Start is called before the first frame update
     void Start()
@@ -51,16 +50,6 @@ public class ButtonBehavior : MonoBehaviour
     public void ZoomOut()
     {
         
-    }
-
-    public void ViewMiniMap()
-    {
-        SceneManager.LoadScene("MiniMap");
-    }
-
-    public void MinMapBack()
-    {
-        SceneManager.LoadScene(CAMPUS);
     }
 
 }

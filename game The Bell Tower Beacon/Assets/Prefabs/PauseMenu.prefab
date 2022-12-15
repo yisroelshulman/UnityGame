@@ -585,7 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6332f0fc3c96284a9569639e3ad9e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonCanvas: {fileID: 5134318356735097146}
+  buttonCanvas: {fileID: 0}
   PauseMenu: {fileID: 0}
 --- !u!1 &8040162327255434572
 GameObject:
@@ -754,7 +754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit to Main Menu
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1192,7 +1192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2942159380329024497, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2942159380329024501, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
       propertyPath: m_Pivot.x
@@ -1304,11 +1304,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
---- !u!1 &5134318356735097146 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2942159380329024497, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
-  m_PrefabInstance: {fileID: 8040162328285426379}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5134318356735097150 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2942159380329024501, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
