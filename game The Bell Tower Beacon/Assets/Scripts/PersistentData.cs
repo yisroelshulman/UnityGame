@@ -11,9 +11,12 @@ public class PersistentData : MonoBehaviour
     [SerializeField] static float yOffset;
     [SerializeField] static bool isTimeSet;
     [SerializeField] static bool isTaskActive;
-    static int startHour;
-    static int startMinute;
-    static int startSecond;
+    [SerializeField] string playerName;
+    [SerializeField] int playerExamScore;
+    [SerializeField] int playerTime;
+
+
+    static int startTotalSeconds;
 
     const int SECINMIN = 60;
     const int SECINHR = SECINMIN * 60;
@@ -43,6 +46,9 @@ public class PersistentData : MonoBehaviour
             isTaskActive = false;
             SetTasks();
             taskLeft = NUMTASKS;
+            playerName = "";
+            playerExamScore = 0;
+            playerTime = -1;
         }
         else
             Destroy(gameObject);
@@ -80,19 +86,9 @@ public class PersistentData : MonoBehaviour
         return isTaskActive;
     }
 
-    public int GetStartHour()
+    public int GetTotalStartSeconds()
     {
-        return startHour;
-    }
-
-    public int GetStartMinute()
-    {
-        return startMinute;
-    }
-
-    public int GetStartSecond()
-    {
-        return startSecond;
+        return startTotalSeconds;
     }
 
     public int GetTasksLeft()
@@ -113,6 +109,21 @@ public class PersistentData : MonoBehaviour
     public int GetExamWrong()
     {
         return examWrong;
+    }
+
+    public string GetName()
+    {
+        return playerName;
+    }
+
+    public int GetExamScore()
+    {
+        return playerExamScore;
+    }
+
+    public int GetTime()
+    {
+        return playerTime;
     }
 
     public string GetTask()
@@ -170,9 +181,10 @@ public class PersistentData : MonoBehaviour
     public void SetStartTime()
     {
         DateTime time = DateTime.Now;
-        startHour = time.Hour;
-        startMinute = time.Minute;
-        startSecond = time.Second;
+        int hour = time.Hour;
+        int minute = time.Minute;
+        int second = time.Second;
+        startTotalSeconds = hour*SECINHR + minute*SECINMIN + second;
     }
 
     private void SetTasks()
@@ -185,8 +197,8 @@ public class PersistentData : MonoBehaviour
             {3, "Find the Personal Counseling Center, Room 0203 in James Hall."},
             {4, "Find the Health Clinic, Room 114 in Roosevelt Hall."},
             {5, "Find the Food Pantry, Room 312 in SUBO (Student Center)."},
-            {6, "Find tech Support in the WEB Building, in the WEB Building."},
-            {7, "Get Tech Support in the Library, in the Library."},
+            {6, "Find tech Support in the WEB Building."},
+            {7, "Get Tech Support in the Library."},
             {8, "Get Information from the Registrar, Room  306 in the West Quad Building."},
             {9, "Get Information for the Financial Aid Office, Room 308 in the West Quad Building."}
         };
@@ -204,6 +216,27 @@ public class PersistentData : MonoBehaviour
     public void SetExamWrong(int wrong)
     {
         examWrong = wrong;
+    }
+
+    public void SetPlayerName(string s)
+    {
+        playerName = s;
+    }
+
+    public void ResetPlayerExamScore()
+    {
+        playerExamScore = 0;
+    }
+
+    public void ResetPlayerTime()
+    {
+        playerTime = -1;
+    }
+
+    public void ResetTime()
+    {
+        startTotalSeconds = 0;
+        isTimeSet = false;
     }
 
 }

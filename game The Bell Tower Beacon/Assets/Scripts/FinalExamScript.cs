@@ -56,7 +56,7 @@ public class FinalExamScript : MonoBehaviour
         exam[4] = "Question 4\n\nFor help with a class or writing you can go to the Learning Center, which is located at";
         exam[5] = "Question 5\n\nThe Food Pantry which helps studetns with basic Foods is located in";
         exam[6] = "Question 6\n\nFor help with your college emails or CUNY First account you can consult";
-        exam[7] = "Question 7\n\nYou want to create/touch up your resume you go visit the Magenr Center at";
+        exam[7] = "Question 7\n\nYou want to create/touch up your resume you go visit the Magner Center at";
         exam[8] = "Question 8\n\nAs a BC student you have access to the Health Clinic in";
         exam[9] = "Question 9\n\nThe Financial Aid Office is located at";
         exam[10] = "Question 10\n\nThe Women's Center is in which building?";
@@ -89,7 +89,7 @@ public class FinalExamScript : MonoBehaviour
         choices[20] = "The Library Second Floor Information Desk";
         choices[21] = "Campus Safety";
         choices[22] = "Information Desk, West Quad Building";
-        choices[23] = "Informatio Desk, The Learning Center";
+        choices[23] = "Information Desk, The Learning Center";
         choices[24] = "253A Whitehead Hall";
         choices[25] = "429 Ingersoll Extension";
         choices[26] = "1303 James Hall";

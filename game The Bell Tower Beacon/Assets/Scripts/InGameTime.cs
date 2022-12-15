@@ -10,9 +10,6 @@ public class InGameTime : MonoBehaviour
     [SerializeField] TMP_Text tasks;
     bool isTimeSet;
     bool isTaskActive;
-    int startHour;
-    int startMinute;
-    int startSecond;
     int totalSeconds;
 
     const int SECINMIN = 60;
@@ -30,10 +27,8 @@ public class InGameTime : MonoBehaviour
             PersistentData.Instance.SetStartTime();
             isTimeSet = true;
         }
-        startHour = PersistentData.Instance.GetStartHour();
-        startMinute = PersistentData.Instance.GetStartMinute();
-        startSecond = PersistentData.Instance.GetStartSecond();
-        totalSeconds = startHour*SECINHR + startMinute*SECINMIN + startSecond;
+
+        totalSeconds = PersistentData.Instance.GetTotalStartSeconds();
     }
 
     // Update is called once per frame
