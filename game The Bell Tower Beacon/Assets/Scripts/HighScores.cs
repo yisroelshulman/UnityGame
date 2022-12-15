@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class HighScores : MonoBehaviour
 {
@@ -147,6 +148,27 @@ public class HighScores : MonoBehaviour
     private string Format(int x)
     {
         return x.ToString("00");
+    }
+
+    public void MainMenu()
+    {
+        PersistentData.Instance.Reset();
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ResetHighScores()
+    {
+        PlayerPrefs.DeleteAll();
+        PersistentData.Instance.Reset();
+        playerName = PersistentData.Instance.GetName();
+        playerExamScore = Mathf.RoundToInt(PersistentData.Instance.GetExamScore());
+        playerTime = PersistentData.Instance.GetTime();
+        SceneManager.LoadScene("HighScores");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 }

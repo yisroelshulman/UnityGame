@@ -256,7 +256,8 @@ public class PersistentData : MonoBehaviour
 
     public void ResetPlayerExamScore()
     {
-        playerExamScore = 0;
+        examCorrect = 0;
+        examWrong = 0;
     }
 
     public void ResetPlayerTime()
@@ -270,11 +271,17 @@ public class PersistentData : MonoBehaviour
         isTimeSet = false;
     }
 
+    public void ResetName()
+    {
+        playerName = "";
+    }
+
     public void Reset()
     {
         ResetPlayerExamScore();
         ResetPlayerTime();
         ResetTime();
+        ResetName();
         mode = FULL;
     }
 
