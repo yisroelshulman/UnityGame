@@ -26,21 +26,11 @@ public class ButtonBehavior : MonoBehaviour
         GameObject.FindGameObjectWithTag("GameController").GetComponent<WasteTime>().Back();
     }
 
-    public void RulesBack()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-
     public void GetTask()
     {
         PersistentData.Instance.GetTask();
         Vector2 pos = new Vector2(558.8197F, 274.1418F);
         Instantiate(TaskPanel, pos, Quaternion.identity);
-    }
-
-    public void Viewtask()
-    {
-
     }
 
     public void ZoomIn()
