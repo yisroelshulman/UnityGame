@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuOptions : MonoBehaviour
 {
-    [SerializeField] GameObject buttonCanvas;
-    [SerializeField] GameObject PauseMenu;
+    [SerializeField] GameObject volume;
 
     // Start is called before the first frame update
     void Start()
     {
-        buttonCanvas = GameObject.FindWithTag("ButtonCanvas");
+        volume = GameObject.FindWithTag("ButtonCanvas");
         ButtonBack();
     }
 
@@ -23,17 +22,12 @@ public class PauseMenuOptions : MonoBehaviour
     /// Needs functionality
     public void Buttons()
     {
-        buttonCanvas.SetActive(true);
+        volume.SetActive(true);
     }
 
     public void ButtonBack()
     {
-        buttonCanvas.SetActive(false);
-    }
-
-    public void Pause()
-    {
-        PauseMenu.SetActive(true);
+        volume.SetActive(false);
     }
 
     public void Unpause()

@@ -26,9 +26,9 @@ public class ButtonBehavior : MonoBehaviour
         GameObject.FindGameObjectWithTag("GameController").GetComponent<WasteTime>().Back();
     }
 
-    public void GetTask()
+    public void ShowTask()
     {
-        PersistentData.Instance.GetTask();
+        PersistentData.Instance.GetCurrentTask();
         Vector2 pos = new Vector2(558.8197F, 274.1418F);
         Instantiate(TaskPanel, pos, Quaternion.identity);
     }

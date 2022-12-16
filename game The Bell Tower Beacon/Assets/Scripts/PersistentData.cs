@@ -45,6 +45,8 @@ public class PersistentData : MonoBehaviour
     private int penaltyCount;
     const int PENALTYTIME = 2; // in seconds
 
+    bool isTutorial;
+
     public void Awake()
     {
         if (Instance == null)
@@ -62,6 +64,7 @@ public class PersistentData : MonoBehaviour
             playerTime = -1;
             mode = FULL;
             penaltyCount = 0;
+            isTutorial = false;
             ResetPlayerExamScore();
         }
         else
@@ -169,7 +172,11 @@ public class PersistentData : MonoBehaviour
 
     public string GetCurrentTask()
     {
-        return tasks[currentTask];
+        if (isTaskActive && !isTutorial)
+        {
+            return tasks[currentTask];
+        }
+        return "Sample quest!";
     }
 
     public void CompleteTask(int task)
@@ -272,6 +279,11 @@ public class PersistentData : MonoBehaviour
         mode = md;
     }
 
+    public void SetTutorial(bool active)
+    {
+        isTutorial = active;
+    }
+
     public void ResetPlayerExamScore()
     {
         examCorrect = 0;
@@ -308,6 +320,7 @@ public class PersistentData : MonoBehaviour
         taskLeft = NUMTASKS;
         playerExamScore = 0;
         penaltyCount = 0;
+        isTutorial = false;
     }
 
     public void IncreasePenaltyCount()

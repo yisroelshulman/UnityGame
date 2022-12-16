@@ -16,29 +16,37 @@ public class InGameTime : MonoBehaviour
     const int SECINHR = SECINMIN * 60;
     const int MININHR = 60;
     
+    bool started;
 
     // Start is called before the first frame update
     void Start()
     {
-        isTimeSet = PersistentData.Instance.GetIsTimeSet();
-        if (!isTimeSet)
-        {
-            PersistentData.Instance.SetIsTimeSet(true);
-            PersistentData.Instance.SetStartTime();
-            isTimeSet = true;
-        }
-
-        startSeconds = PersistentData.Instance.GetTotalStartSeconds();
+        started = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!started)
+        {
+            started = PersistentData.Instance.GetIsTimeSet();
+            startSeconds = PersistentData.Instance.GetTotalStartSeconds();
+        }
         DisplayTime();
     }
 
     void DisplayTime()
     {
+
+        int taskToDo = PersistentData.Instance.GetTasksLeft();
+        int taskComplete = PersistentData.Instance.GetNumTasks() - taskToDo;
+
+        if (!started)
+        {
+            time.text = Format(0) + ":" + Format(0) + ":" + Format(0);
+            tasks.text = "Tasks done " + + taskComplete;
+            return;
+        }
         DateTime t = DateTime.Now;
 
         int penaltySeconds = PersistentData.Instance.GetPenaltyTime();
@@ -48,9 +56,6 @@ public class InGameTime : MonoBehaviour
         int minutesLeft = (totalInSecs - second) / SECINMIN;
         int minute = minutesLeft % MININHR;
         int hour = minutesLeft / MININHR;
-        
-        int taskToDo = PersistentData.Instance.GetTasksLeft();
-        int taskComplete = PersistentData.Instance.GetNumTasks() - taskToDo;
 
         
 
