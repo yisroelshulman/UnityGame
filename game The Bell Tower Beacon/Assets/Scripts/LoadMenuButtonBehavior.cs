@@ -7,7 +7,7 @@ using TMPro;
 
 public class LoadMenuButtonBehavior : MonoBehaviour
 {
-    [SerializeField] GameObject buttonCanvas;
+    [SerializeField] GameObject VolumeCanvas;
     [SerializeField] GameObject playerNameInput;
     [SerializeField] GameObject message;
 
@@ -16,17 +16,17 @@ public class LoadMenuButtonBehavior : MonoBehaviour
     [SerializeField] Toggle t3;
 
     const int FULL = 0;
-    const int TASK =1;
+    const int TASK = 1;
     const int EXAM = 2;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (buttonCanvas == null)
+        if (VolumeCanvas == null)
         {
-            buttonCanvas = GameObject.FindWithTag("ButtonCanvas");
-            ButtonBack();
+            VolumeCanvas = GameObject.FindWithTag("ButtonCanvas");
         }
+        ButtonBack();
         message.SetActive(false);
     }
 
@@ -39,12 +39,12 @@ public class LoadMenuButtonBehavior : MonoBehaviour
     /// Needs functionality
     public void Buttons()
     {
-        buttonCanvas.SetActive(true);
+        VolumeCanvas.SetActive(true);
     }
 
     public void ButtonBack()
     {
-        buttonCanvas.SetActive(false);
+        VolumeCanvas.SetActive(false);
     }
 
     public void StartGame()

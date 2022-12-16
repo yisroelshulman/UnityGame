@@ -34,6 +34,7 @@ public class WasteTime : MonoBehaviour
 
     void Waste()
     {
+        PersistentData.Instance.IncreasePenaltyCount();
         Vector2 pos = new Vector2(558.8197f, 274.1418f);
         Instantiate(TimeWaste, pos, Quaternion.identity);
     }

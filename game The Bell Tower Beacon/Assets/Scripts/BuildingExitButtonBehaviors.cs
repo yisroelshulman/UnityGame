@@ -37,6 +37,9 @@ public class BuildingExitButtonBehaviors : MonoBehaviour
 
     private const float JAMESMAINX = 19.20004f;
     private const float JAMESMAINY = -14.10001f;
+    private const float JAMESCMPRDX = 12.4f;
+    private const float JAMESCMPRDY = -25.30006f;
+
 
     private const float ROOSEASTX = 10.4f;
     private const float ROOSEASTY = 10.60001f;
@@ -157,6 +160,13 @@ public class BuildingExitButtonBehaviors : MonoBehaviour
     {
         PersistentData.Instance.SetXOffset(JAMESMAINX);
         PersistentData.Instance.SetYOffset(JAMESMAINY);
+        SceneManager.LoadScene(CAMPUS);
+    }
+
+    public void ExitJamesCampusRd()
+    {
+        PersistentData.Instance.SetXOffset(JAMESCMPRDX);
+        PersistentData.Instance.SetYOffset(JAMESCMPRDY);
         SceneManager.LoadScene(CAMPUS);
     }
 

@@ -335,7 +335,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Buttons
+  m_text: Volume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -568,8 +568,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5134318356735097150}
   - {fileID: 8040162327255434573}
+  - {fileID: 1676526630295532604}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -585,8 +585,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6332f0fc3c96284a9569639e3ad9e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonCanvas: {fileID: 5134318356735097146}
-  PauseMenu: {fileID: 0}
+  buttonCanvas: {fileID: 0}
+  PauseMenu: {fileID: 1676526630295532600}
 --- !u!1 &8040162327255434572
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,7 +620,7 @@ RectTransform:
   m_Children:
   - {fileID: 8040162327325406237}
   m_Father: {fileID: 8040162326761310869}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1171,24 +1171,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1001 &8040162328285426379
+--- !u!1001 &4580334853884952521
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 8040162326761310869}
     m_Modifications:
-    - target: {fileID: 2942159379704187678, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4444054447137390145, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
-    - target: {fileID: 2942159379704187678, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: setToWASD
-      objectReference: {fileID: 0}
     - target: {fileID: 2942159380329024497, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
       propertyPath: m_Name
-      value: ButtonSelectionCanvas
+      value: VolumeMenu
       objectReference: {fileID: 0}
     - target: {fileID: 2942159380329024497, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
       propertyPath: m_IsActive
@@ -1204,7 +1196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2942159380329024501, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2942159380329024501, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1278,39 +1270,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2942159380986887628, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
-      propertyPath: m_Color.a
+    - target: {fileID: 7735407336601582452, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735407336601582452, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2942159381176626508, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2753712681276580361}
-    - target: {fileID: 2942159381176626508, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ButtonBack
+    - target: {fileID: 7735407336601582452, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.55
       objectReference: {fileID: 0}
-    - target: {fileID: 2942159381176626508, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseMenuOptions, Assembly-CSharp
+    - target: {fileID: 7735407337080868963, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.55
       objectReference: {fileID: 0}
-    - target: {fileID: 2942159381310252316, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4444054447137390145, guid: 8e1640eced1e2364988658f5c366839a, type: 3}
-    - target: {fileID: 2942159381310252316, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: setToArrowKeys
+    - target: {fileID: 7735407337080868963, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
---- !u!1 &5134318356735097146 stripped
+--- !u!1 &1676526630295532600 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2942159380329024497, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
-  m_PrefabInstance: {fileID: 8040162328285426379}
+  m_PrefabInstance: {fileID: 4580334853884952521}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &5134318356735097150 stripped
+--- !u!224 &1676526630295532604 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2942159380329024501, guid: 7651022c3b285b6478f3fc9f37ebbf04, type: 3}
-  m_PrefabInstance: {fileID: 8040162328285426379}
+  m_PrefabInstance: {fileID: 4580334853884952521}
   m_PrefabAsset: {fileID: 0}

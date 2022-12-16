@@ -15,6 +15,8 @@ public class PersistentData : MonoBehaviour
     [SerializeField] float playerExamScore;
     [SerializeField] int playerTime;
 
+    private const string CAMPUS = "Campusv2BetterMovementLogic";
+
 
     static int startTotalSeconds;
 
@@ -35,10 +37,13 @@ public class PersistentData : MonoBehaviour
     private int examWrong;
 
     const int FULL = 0;
-    const int TASK =1;
+    const int TASK = 1;
     const int EXAM = 2;
 
-    private int mode;
+    static int mode;
+
+    private int penaltyCount;
+    const int PENALTYTIME = 2; // in seconds
 
     public void Awake()
     {
@@ -56,6 +61,8 @@ public class PersistentData : MonoBehaviour
             playerExamScore = 0;
             playerTime = -1;
             mode = FULL;
+            penaltyCount = 0;
+            ResetPlayerExamScore();
         }
         else
             Destroy(gameObject);
@@ -135,12 +142,17 @@ public class PersistentData : MonoBehaviour
 
     public int GetTime()
     {
-        return playerTime;
+        return playerTime + GetPenaltyTime() - startTotalSeconds;
     }
 
     public int GetMode()
     {
         return mode;
+    }
+
+    public int GetPenaltyTime()
+    {
+        return penaltyCount * PENALTYTIME;
     }
 
     public string GetTask()
@@ -168,6 +180,7 @@ public class PersistentData : MonoBehaviour
             tasksLeftList[index] = tasksLeftList[taskLeft - 1];
             taskLeft--;
             currentTask = -1;
+
             if (taskLeft == 0)
             {
                 DateTime time = DateTime.Now;
@@ -178,9 +191,14 @@ public class PersistentData : MonoBehaviour
                 if (mode == TASK)
                 {
                     SceneManager.LoadScene("HighScores");
+                    return;
                 }
                 SceneManager.LoadScene("FinalExam");
+                return;
             }
+            xOffset = 0;
+            yOffset = 0;
+            SceneManager.LoadScene(CAMPUS);
         }
     }
 
@@ -282,7 +300,19 @@ public class PersistentData : MonoBehaviour
         ResetPlayerTime();
         ResetTime();
         ResetName();
+        xOffset = 0;
+        yOffset = 0;
         mode = FULL;
+        isTaskActive = false;
+        SetTasks();
+        taskLeft = NUMTASKS;
+        playerExamScore = 0;
+        penaltyCount = 0;
+    }
+
+    public void IncreasePenaltyCount()
+    {
+        penaltyCount++;
     }
 
 }

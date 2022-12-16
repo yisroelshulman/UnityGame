@@ -33,18 +33,13 @@ public class ButtonBehavior : MonoBehaviour
         Instantiate(TaskPanel, pos, Quaternion.identity);
     }
 
-    public void ZoomIn()
-    {
-
-    }
-
-    public void ZoomOut()
-    {
-        
-    }
-
     public void ViewMiniMap()
     {
+        Transform map = GameObject.FindWithTag("map").transform;
+        float x = map.position.x;
+        float y = map.position.y - 1.11f;
+        PersistentData.Instance.SetXOffset(x);
+        PersistentData.Instance.SetYOffset(y);
         SceneManager.LoadScene("MiniMap");
     }
 

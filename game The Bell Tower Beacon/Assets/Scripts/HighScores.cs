@@ -11,6 +11,7 @@ public class HighScores : MonoBehaviour
     const string SCORE_KEY = "Score";
 
     private string playerName;
+    private string playerEName;
     private int playerExamScore;
     private int playerTime;
  
@@ -31,9 +32,10 @@ public class HighScores : MonoBehaviour
     void Start()
     {
         playerName = PersistentData.Instance.GetName();
+        playerEName = PersistentData.Instance.GetName();
         playerExamScore = Mathf.RoundToInt(PersistentData.Instance.GetExamScore());
         playerTime = PersistentData.Instance.GetTime();
-        if (playerExamScore > 0)
+        if (playerExamScore > 0 || playerTime != -1)
         {
             SaveTimeHighScores();
             SaveExamHighScores();
@@ -85,7 +87,7 @@ public class HighScores : MonoBehaviour
         }
         for (int i = NUM_HIGH_SCORES + 1; i <= NUM_HIGH_SCORES*2; i++)
         {
-            string currentNameKey = NAME_KEY + i;
+            string currentSNameKey = NAME_KEY + i;
             string currentScoreKey = SCORE_KEY + i;
 
             if (PlayerPrefs.HasKey(currentScoreKey))
@@ -94,18 +96,18 @@ public class HighScores : MonoBehaviour
                 if (playerExamScore > currentScore)
                 {
                     int tempScore = currentScore;
-                    string tempName = PlayerPrefs.GetString(currentNameKey);
+                    string tempName = PlayerPrefs.GetString(currentSNameKey);
 
-                    PlayerPrefs.SetString(currentNameKey, playerName);
+                    PlayerPrefs.SetString(currentSNameKey, playerEName);
                     PlayerPrefs.SetInt(currentScoreKey, playerExamScore);
 
-                    playerName = tempName;
+                    playerEName = tempName;
                     playerExamScore = tempScore;
                 }
             }
             else
             {
-                PlayerPrefs.SetString(currentNameKey, playerName);
+                PlayerPrefs.SetString(currentSNameKey, playerEName);
                 PlayerPrefs.SetInt(currentScoreKey, playerExamScore);
                 return;
             }
@@ -127,11 +129,17 @@ public class HighScores : MonoBehaviour
             scoreTextsExam[i].text = PlayerPrefs.GetInt(SCORE_KEY + (i + NUM_HIGH_SCORES + 1)).ToString();
         }
 
-        string time = playerTime.ToString();
+
+        playerName = PersistentData.Instance.GetName();
+        playerExamScore = Mathf.RoundToInt(PersistentData.Instance.GetExamScore());
+        playerTime = PersistentData.Instance.GetTime();
+
+        string time = ConvertTime(playerTime);
         if (playerTime < 0)
         {
             time = "N/A";
         }
+        
         string score = playerExamScore.ToString();
         playerInfo.text = playerName + ": Time " + time + ", Exam Score " + score;
     }
