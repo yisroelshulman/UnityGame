@@ -10,10 +10,12 @@ public class ButtonBehavior : MonoBehaviour
     
     [SerializeField] GameObject TaskPanel;
     private const string CAMPUS = "Campusv2BetterMovementLogic";
+
+    
     
     // Start is called before the first frame update
     void Start()
-    {        
+    {
     }
 
     // Update is called once per frame
@@ -24,6 +26,13 @@ public class ButtonBehavior : MonoBehaviour
     public void Back()
     {
         GameObject.FindGameObjectWithTag("GameController").GetComponent<WasteTime>().Back();
+    }
+
+    public void GetTask()
+    {
+        PersistentData.Instance.GetTask();
+        Vector2 pos = new Vector2(558.8197F, 274.1418F);
+        Instantiate(TaskPanel, pos, Quaternion.identity);
     }
 
     public void ShowTask()

@@ -9,7 +9,7 @@ public class Instructions : MonoBehaviour
 
     [SerializeField] TMP_Text instruc;
 
-    const int NUMPAGES = 3;
+    const int NUMPAGES = 6;
     string[] pages = new string[NUMPAGES];
     int currentPage;
 
@@ -28,22 +28,24 @@ public class Instructions : MonoBehaviour
 
     private void InitInstruct()
     {
-        pages[0] = "Still working on:\nTimer - a timer to complete the tasks in the allotted time.\nZoom function - the ability to" + 
-                    "zoom in and out on the main map to help with visibility.\nTo pause the game press the \"p\" key.\nSound controls," +
-                    " (Tutorial and game are the same).\nTasks - a better description and small motivation/backstory for each task. A" +
-                    " way to see which task is currently active.\nPenalties - need to add functionality to increase time played by" +
-                    " penalty amount when the wrong room is entered (or when the wrong task is being selected to complete).\n\n" +
-                    "Note:\nThe movement is intentional, the player can only move horizontal or vertical and not diagonal.";
-        pages[1] = "Instructions:\nThe goal of the game is to teach the player about campus resources, as such the player will have" +
-                    " tasks to complete which will highlight the resource and where/how to access it. The player will move around" +
-                    " campus going to specific rooms in buildings (be careful the wrong room will waste some time). Tasks will be timed" +
-                    " and a final exam at the end will evaluate how well the player knows resources around campus and where to find them.\n" +
-                    "The player can move around the map using the arrow keys or the WASD keys. Next to every enterable building there is an" +
-                    " outline zone, when the player is in that zone hitting enter on the keyboard will enter the building.\n";
-        pages[2] = "To get a new task the player must go to the West Quad Building and select the get task Button. A new task will appear on the screen. When" +
-                    " the task is complete the task done/complete count will increase. When all 10 tasks are complete the player will have the" +
-                    "option to end the game or take the Final exam. (Be careful failure to complete a task will waste time since there is a time penalty).\n" +
-                    "There are two high scores, one is the in-game time to complete all 10 tasks. The second is score on the Final Exam.";
+        pages[0] = "Please note:\n\n" +
+                    "The movement behavior is intentional; the player can only move horizontal or vertical and not diagonal.\n\n" +
+                    "Tasks are a little monotonous - in the future we hope to include a better description and small motivation/backstory for each quest.";
+        pages[1] = "Introduction:\n\n" +
+                    "The goal of the game is to teach the player about various resources that are available to students at Brooklyn college. The player is introduced " +
+                    "to a resource through a task/quest, the quest requires the player to go to a specific building and room on campus where the center for that " +
+                    "resource is located.";
+        pages[2] = "Through playing this game the player will learn about ten resources on campus and how to navigate the Brooklyn college campus. " +
+                    "Additionally, the map contains the offices for various academic departments at Brooklyn College.\n\n" +
+                    "The second portion of the game is an exam that tests the player on the information learnt in the tasks/quests section. There are ten questions, one " +
+                    "related to each task done.\n";
+        pages[3] = "As an incentive to get better the game keeps a high score for fastest completion time of the tasks and for the highest score on the exam. To balance " +
+                    "the game from bad RNG in task order the player spawn at the same location after completing each task.\n\n" +
+                    "There are three game modes offered full which has both the tasks and the exam at the end. Tasks, which only includes the task portion of the game, " +
+                    "and Exam which only includes the exam.\n";
+        pages[4] = "Although the task section is timed, we encourage the player to try a play through without completion to explore campus and learn how to navigate, there " +
+                    "is a lot of information in the map.\n";
+        pages[5] = "Thank you and we hope you enjoy our game!";
         instruc.text = pages[currentPage];
     }
 

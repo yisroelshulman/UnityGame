@@ -46,9 +46,20 @@ public class MovementTracker : MonoBehaviour
     const int SPRITE_NOT_MOVING = 0;
     const int SPRITE_MOVING = 1;
 
+    bool isStarted;
+    [SerializeField] GameObject tutorial;
+
     // Start is called before the first frame update
     void Start()
     {
+        isStarted = PersistentData.Instance.GetIsTimeSet();
+        if (!isStarted)
+        {
+            Vector2 pos = new Vector2(558.8197F, 274.1418F);
+            Instantiate(tutorial, pos, Quaternion.identity);
+        }
+
+
         Time.timeScale = 1.0F;
         map = GameObject.FindWithTag("map");
         squareBoundary = GameObject.FindGameObjectsWithTag("SquareBoundary");
